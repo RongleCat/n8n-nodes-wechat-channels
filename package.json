@@ -1,0 +1,49 @@
+{
+  "name": "n8n-nodes-wechat-channels",
+  "version": "1.0.0",
+  "description": "n8n community node to download and decrypt WeChat Channels (微信视频号) encrypted videos via WASM",
+  "license": "MIT",
+  "homepage": "https://github.com/ronglecat/n8n-nodes-wechat-channels#readme",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "wechat",
+    "channels",
+    "视频号",
+    "video",
+    "decrypt",
+    "wasm"
+  ],
+  "author": { "name": "ronglecat", "email": "ronglecat@163.com" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronglecat/n8n-nodes-wechat-channels.git"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "postbuild": "node scripts/copy-wasm.mjs",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "smoke": "node scripts/smoke-test.cjs",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": false,
+    "credentials": [],
+    "nodes": ["dist/nodes/WeChatChannelsDecrypt/WeChatChannelsDecrypt.node.js"]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "@types/node": "^22.0.0",
+    "eslint": "9.29.0",
+    "prettier": "3.6.2",
+    "release-it": "^19.0.4",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": { "n8n-workflow": "*" }
+}

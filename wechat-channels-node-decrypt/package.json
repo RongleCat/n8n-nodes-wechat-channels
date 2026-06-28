@@ -1,0 +1,13 @@
+{
+  "name": "wechat-channels-node-decrypt",
+  "version": "1.0.0",
+  "description": "微信视频号纯 Node WASM 解密（摆脱无头浏览器）",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
